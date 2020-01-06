@@ -13,7 +13,7 @@ features-list: 1. secure login system.
                
                
 GETTING STARTED
-1. You have to install "rmagick" in your is, just Google it how to install.
+1. You have to install "rmagick" in your pc, just Google it how to install.
 2. clone the repositery to your desired location.
 3. open gallery folder (which is present in your desired location where you clone the repo) and open terminal in gallery location.
 4. write "bundle install" in the terminal.
@@ -21,7 +21,7 @@ GETTING STARTED
 6. open "http://localhost:3000/" and enjoy.
 7. feel free to upgrade it according to you.
 
-$$ Ruby and Ruby on rails must be properly installed on your PC.
+$$ "Ruby" and "Ruby on rails" must be properly installed on your PC.
 
 IMPORTANT POINT: 
 if you want to login as an Admin user to use the full functionality of this site, Please use the given credential for login, otherwise signup, you will find the signup link in login section.
