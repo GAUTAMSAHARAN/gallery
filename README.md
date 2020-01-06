@@ -14,7 +14,7 @@ features-list: 1. secure login system.
                
 GETTING STARTED
 1. clone the repositery to your desired location.
-2. open terminal and to your location in which you clone this repo.
+2. open gallery folder and open terminal in gallery location.
 3. write ("rials server") in the terminal.
 4. open "http://localhost:3000/" and enjoy.
 5. feel free to upgrade it according to you.
