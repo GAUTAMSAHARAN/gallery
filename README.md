@@ -1,24 +1,20 @@
-# README
+# GALLERY
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A complete GALLERY model on Rails
 
-Things you may want to cover:
+its simple cool with all the common necessary features 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+features-list: 1. secure login system.
+               2. upload images.
+               3. Admin authentication.
+               4. Add categories for admin users.
+               5. Porfile pages with show your bio, profile-iamge, posts.
+               
+               
+               
+GETTING STARTED
+1. clone the repositery to your desired location.
+2. open terminal and to your location in which you clone this repo.
+3. write ("rials server") in the terminal.
+4. open "http://localhost:3000/" and enjoy.
+5. feel free to upgrade it according to you.
