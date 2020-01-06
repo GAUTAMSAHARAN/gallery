@@ -41,7 +41,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rmagick'
 gem 'carrierwave'
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.1'
 gem 'bootstrap', '>= 1.1.0', require: false
 
 gem 'autoprefixer-rails'
