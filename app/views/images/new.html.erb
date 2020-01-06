@@ -1,0 +1,60 @@
+<% if logged_in? %>
+<body class="new">
+<div class="body-new">
+ <div class="info-upload1">
+  <p>"There are always two people in every picture: the photographer and the viewer." -Ansel Adams</p>
+ </div>
+ <div  class="upload-form" >
+ <%= form_for @image, :html => {:multipart => true} do |f| %>
+
+	<div class="upload-title">
+		<%= f.label :image_title %>
+		<%= f.text_field :image_title ,class: "form-control" %>
+	</div>
+	<br>
+	<br>
+	<div class="upload-category">
+		<%= f.label :category %>
+		<%= f.select :category_id, Category.all.collect {
+			|x| [x.name, x.id]}, {:include_black => "Select One"}, class: "form-control", :id =>'category' %>
+	</div>
+	<br>
+	<br>
+	<div class="upload-desc">
+		<%= f.label :image_description %>
+		<%= f.text_area :image_description , class: "form-control" %>
+	</div>
+
+	<br>
+	<br>
+
+	<div class="upload-image">
+		<%= f.label :image %>
+		<%= f.file_field :image, class: "form-button" %>
+	</div>
+	<br>
+	<br>
+	<div class="upload-uses">
+		<%= f.hidden_field :user_id, value: current_user.id %>
+	</div>
+	<%= f.submit "Submit", class:"btn", :id=>'btn1' %>
+ </div>
+
+ <% end %>
+</div>
+ <br>
+  <div class="info-upload2">
+  <p>“When I have a camera in my hand, I know no fear."– Alfred Eisenstaedt</p>
+ </div>
+  <div class="info-upload3">
+  <p>“There are no bad pictures; that’s just how your face looks sometimes.”– Abraham Lincoln</p>
+ </div>
+  </div>
+  <div class="info-upload4">
+  <p>“Gosh, my job is so easy! I just click a button all day… said no photographer ever.”– Unknown</p>
+ </div>
+</body>
+ <% else %>
+  <%= render :template => 'sessions/new' %>
+ 
+<% end %>

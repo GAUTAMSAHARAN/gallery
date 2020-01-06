@@ -1,0 +1,518 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body{
+	padding-top: 60px;
+	background-color: #ffffff ;
+}
+.column img{
+	    width: 100%;
+	    height: 100%;
+}
+.column{
+	float: left;
+	width: 25%;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 400px;
+}
+
+
+#right{
+	float: right;
+}
+.row{
+	padding: 5px;
+	margin: 0;
+       }
+	.desc,
+	.title {
+		margin: 0;
+		padding: 0;
+	}
+	.image-info {		
+		color: white;
+		background: rgba(0,0,0,0.81);
+		overflow-x: hidden;
+		width: 435px;
+		height: 50%;
+		padding: 50px 15px 0 15px;
+		text-align: center;
+		opacity: 0;
+		position: absolute;
+		bottom: 0px;
+		-webkit-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	}
+	.column {
+   	position: relative;
+		overflow: hidden;
+
+		margin: 15px auto;
+	}
+	.column img:hover{
+		-webkit-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+		-webkit-filter: blur(1px);
+		-moz-filter: blur(1px);
+		-ms-filter: blur(1px);
+		-o-filter: blur(1px);
+		filter: blur(1px);
+		transform: scale(1.03);
+	}
+	.image-info:hover {
+		-webkit-opacity: 100;
+		opacity: 100;
+	}
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* edit-images */
+
+
+#image-info {		
+		color: white;
+		background: rgba(0,0,0,1);
+		overflow-x: hidden;
+		width: 339px;
+		height: 100%;
+		padding: 165px 15px 0 15px;
+		text-align: center;
+		opacity: 0;
+		position: absolute;
+		bottom: 0px;
+		-webkit-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	}
+#image-info:hover {
+		-webkit-opacity: 100;
+		opacity: 100;
+	}
+.delete{
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	text-decoration: none;
+}
+#columnid{
+	width: 20%;
+}
+#profile-pic{
+	width: 300px;
+	height: 302px;
+
+	img{
+    padding-left: 14px;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	}
+}
+#img{
+	border: 5px solid white;
+}
+.profile-photo{
+    width: 320px;
+    background-color: white;
+	float:left;
+	margin-left: 20px;
+}
+.list{
+	margin-right: 300px;
+	
+	
+}
+#bio{
+	font-size: 30px;
+	list-style-type: none;
+    display: inline-block;
+	width: 800px;
+
+	float: right;
+    background-color: white;
+}
+.form-profile{
+	display: inline-block;
+	background-color: #F4B41A;
+	width: 100%;
+
+}
+.profile-info{
+
+	text-align: center;
+}
+.username{
+	font-size: 20px;
+}
+.text-p{
+	text-align: center;
+}
+.edit{
+	font-size: 35px;
+}
+
+/* upload-image */
+
+.upload-form{
+    height: 600px;
+    width: 400px;
+	float: right;
+	margin-right: 120px;
+	background-color: white;
+	border: 10px solid #2D2926FF;
+	color: black;
+}
+body.new{
+	width: 100%;
+	height: 100%;
+	background-image: url("6.jpg");
+	background-size: cover;
+}
+
+.upload-form{
+	border-radius: 5%;
+	padding: 15px;
+	margin-top: 50px;
+}
+.body-new{
+	display: incline block;
+}
+.info-upload1{
+	color: white;
+	font-size: 30px;
+	width: 600px;
+	float: left;
+	text-align: center;
+	margin-left: 200px;
+	background-color: #2D2926FF;
+	border-radius: 7%;
+	margin-top: 50px;
+
+}
+.info-upload2{
+	color: white;
+	font-size: 30px;
+	width: 600px;
+	float: left;
+	text-align: center;
+	margin-left: 200px;
+	background-color: #E94B3CFF;
+	border-radius: 7%;
+	margin-top: 25px;
+
+}
+.info-upload3{
+	color: white;
+	font-size: 30px;
+	width: 600px;
+	float: left;
+	text-align: center;
+	margin-left: 200px;
+	background-color: #2D2926FF;
+	border-radius: 7%;
+	margin-top: 25px;
+
+}
+.info-upload4{
+	color: white;
+	font-size: 30px;
+	width: 600px;
+	float: left;
+	text-align: center;
+	margin-left: 200px;
+	background-color: #E94B3CFF;
+	border-radius: 7%;
+	margin-top: 25px;
+
+}
+.form-control{
+  border: 5px solid #E94B3CFF;
+  color: black;
+
+}
+.form-button{
+	border: 5px solid #E94B3CFF;
+	color: black;
+}
+#category{
+	height: 45px;
+}
+
+/* catgory-new */
+
+
+.form-group{
+    width: 400px;
+    margin-left: 350px;
+    margin-top: 150px;
+	height:  600px;
+	background-color: white;
+	color: black;
+	border: 10px solid #F49F1C;
+	float: left;
+    padding: 20px;
+}
+.btn {
+	margin-top: 40px;
+	background-color: #F49F1C;
+	color: white;
+    border: none;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.image{
+    margin-right: 350px;
+    margin-top:150px;
+    float: right;
+    background-color: white;
+	width: 400px;
+	height: 600px;
+	padding: 20px;
+	img{ width: 100%;
+	   height: 100%;
+     }
+}
+
+body.category{
+	background-color:  #DE3163;
+	background-image: url("6.jpg");
+	
+    display: inline;
+}
+.category-p{
+	font-size: 20px;
+    font-weight: bold;
+}
+#btn1{
+	padding: 5px;
+}
+
+#btn0{
+    	
+	background-color: #F49F1C;
+	color: white;
+    border: none;
+  padding: 16px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.heading-category{
+	text-align: center;
+}
+
+.button{
+  background-color: #F49F1C;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+body.profile{
+	background-color: #143D59;
+}
+#post{
+	color: white;
+	text-align: center;
+}
+
+.post-heading{
+	text-align: center;
+	color: white;
+}
+
+.edit-form{
+	background-color: white;
+	width: 420px;
+	height: 1000px;
+	border: 20px solid black;
+	margin-left: 800px;
+	margin-top: 50px;
+	padding: 15px;
+}
+.label{
+	text-align: center;
+}
+.text-label{
+	text-align: center;
+}
+.label-text{
+	width: 100%;
+	border: 4px solid #F49F1C;
+}
+.submit-label{
+  background-color: #F49F1C;
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.edit-category-edit{
+	text-align: center;
+}
+.submit-edit-category{
+
+  background-color: #F49F1C;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+	
+}
+.form-edit-category{
+	text-align: center;
+}
+body.sign-up{
+	background-image: url("6.jpg");
+    background-size: cover;
+}
+.container-signup{
+	width: 320px;
+	height: 940px;
+	background-color: white;
+	margin-left: 42%;
+	border: 10px solid #F49F1C;
+	padding: 10px;
+}
+.field-text-sign{
+	width: 100%;
+}
+.submit-sign{
+  background-color: #F49F1C;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;	
+}
+.heading-sign{
+	margin-left: 42%;
+    color: white;
+    background-color: #F49F1C;
+    width: 320px;
+    
+    padding: 5px;
+    text-align: center;
+}
+body.login{
+	background-image: url("6.jpg");
+    background-size: cover;
+}
+.container-login{
+	width: 400px;
+	height: 400px;
+	background-color: white;
+	margin-left: 42%;
+	border: 10px solid #F49F1C;
+	padding: 10px;
+   margin-top: 150px;
+}
+.login-field{
+	width: 100%;
+}
+.submit-login,
+.new-user{
+  background-color: #F49F1C;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+body.user-show{
+	background-image: url("6.jpg");
+    background-size: cover;
+}
+.bio-profile{
+	background-color: white;
+	width: 400px;
+	heigth: 500px;
+	margin-left: 60%;
+	margin-top: 50px;
+	list-decoration-type: none;
+    font-size: 60x;
+}
+body.edit-profile{
+	background-image: url("6.jpg");
+    background-size: cover;
+}
+
+.sign-up-text{
+	font-size: 25px;
+}

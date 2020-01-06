@@ -1,0 +1,57 @@
+<body class="sign-up">
+<h1 class="heading-sign">Sign Up</h1>
+<div class="container-signup">
+ <%= form_for(@user, url: signup_path, html: {multipart: true}) do |u| %>
+  <%= render 'shared/error_messages' %>
+
+  <%= u.label :name, class: 'form-text-sign' %>
+  <br>
+  <%= u.text_field :name, class: 'field-text-sign' %>
+<br>
+  <%= u.label :email, class: 'form-text-sign' %>
+  <br>
+  <%= u.email_field :email, class: 'field-text-sign' %>
+<br>
+  <%= u.label :password, class: 'form-text-sign' %>
+  <br>
+  <%= u.password_field :password, class: 'field-text-sign' %>
+<br>
+  <%= u.label :password_confirmation, class: 'form-text-sign' %>
+  <br>
+  <%= u.password_field :password_confirmation, class: 'field-text-sign' %>
+<br>
+  <%= u.label :age, class: 'form-text-sign' %>
+  <br>
+  <%= u.number_field :age, class: 'field-text-sign' %>
+<br>
+  <%= u.label :gender, class: 'form-text-sign' %>
+  <br>
+  <%= u.text_field :gender, class: 'field-text-sign' %>
+<br>
+  <%= u.label :year, class: 'form-text-sign' %>
+  <br>
+  <%= u.number_field :year, class: 'field-text-sign' %>
+<br>
+  <%= u.label :phone_no, class: 'form-text-sign' %>
+  <br>
+  <%= u.number_field :phone_no, class: 'field-text-sign' %>
+<br>
+  <%= u.label :branch, class: 'form-text-sign' %>
+  <br> 
+  <%= u.text_field :branch, class: 'field-text-sign' %>
+<br>
+  <%= u.label :username, class: 'form-text-sign' %>
+  <br>
+  <%= u.text_field :username, class: 'field-text-sign' %>
+<br>
+<br>
+  <%= u.label :image, "Attach an Profile Image" %><br />
+  <%= u.file_field :image %>
+<br>
+<br>
+  <%= u.submit "create your account", class: 'submit-sign' %>
+<% end %>
+<br>
+<p class="sign-up-text">All fields are mandatory</p>
+</div>
+</body>

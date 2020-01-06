@@ -1,0 +1,36 @@
+<% if logged_in? %>
+<h1 class="edit-category-edit">Edit Category</h1>
+<div class="form-edit-category">
+<%= form_for @category do |c| %>
+
+<%= c.label :name %>
+<%= c.text_field :name %>
+
+<%= c.submit "Submit", class: 'submit-edit-category' %>
+<%= link_to "delete", category_path(@category.id), method: :delete, data: {confirm: "Are you sure"} , class: 'submit-edit-category'%>
+<% end %>
+</div>
+<div>
+<h1 class="edit-category-edit">Images in <%= @category.name %></h1>
+
+  <% if @images.exists? %>
+  <% @images.each_slice(5) do |image| %>
+   <div class="row">
+     <% image.each do |image| %> 
+    <div class="column" id="columnid">
+      <div id="image-info">
+        <div class="title"><%= link_to "DELETE", image_path(image), method: :delete, data: {confirm: "Are you sure"}, class: 'delete' %></div>
+      </div>
+         <%= image_tag image.image_url(), class: "img" %>
+   </div> 
+    <div class="delete"></div>
+     <% end %>
+ </div>
+  <% end %>
+  <% else %>
+  <h2 class="no-images">There are no images</h2>
+<% end %>
+ <% else %>
+  <%= render :template => 'sessions/new' %>
+ 
+<% end %>

@@ -1,0 +1,26 @@
+<body  class="login">
+<div class="container-login">
+   <%= form_for(:session, url: login_path) do |u| %>
+
+	  <%= u.label :email, class: 'login-label'%>
+	  <br>
+	  <%= u.email_field :email, class: 'login-field' %>
+      <br>
+      <br>
+	  <%= u.label :password, class: 'login-label' %>
+	  <br>
+	  <%= u.password_field :password, class: 'login-field' %>
+       <br>
+    <%= u.label :remember_me do %>
+      <%= u.check_box :remember_me %>
+      <span>Remember me on this computer</span>
+    <% end %>
+       <br>
+     <%= u.submit "Log in" , class: 'submit-login' %>
+  <% end %>
+  <br>
+  <br>
+  <br>
+    <p>New user? <%= link_to "Sign up now!", signup_path , class: 'new-user'%></p>
+</div>
+</body>

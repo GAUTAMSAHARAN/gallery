@@ -1,0 +1,18 @@
+create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "username"
+    t.integer "phone_no"
+    t.string "gender"
+    t.string "bhawan"
+    t.string "branch"
+    t.integer "year"
+    t.integer "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email"
+    t.string "encrypted_password", limit: 128
+    t.string "confirmation_token", limit: 128
+    t.string "remember_token", limit: 128
+    t.index ["email"], name: "index_users_on_email"
+    t.index ["remember_token"], name: "index_users_on_remember_token"
+  end

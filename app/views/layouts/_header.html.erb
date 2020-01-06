@@ -1,0 +1,29 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+         <div class="container">
+          <%= link_to "Gallery",root_path , id: "logo" %>
+           <nav>
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Home", root_path  %></li>
+                <li>
+                 <div class="dropdown">
+                    <button class="dropbtn">Categories</button>
+                    <div class="dropdown-content">
+                      <% @navcategory.each do |category| %>
+                     <%= link_to category.name, category_path(category.id) %>
+                      <% end %>
+                    </div>
+                 </div>
+                </li>
+                <li><%= link_to "Add Category", new_category_path %></li>
+                <li><%= link_to "Upload", upload_path  %></li>
+                <li>  <% if logged_in? %>
+                  <%= link_to "Log out", logout_path, method: :delete %>
+                      <% else %>
+                  <%= link_to "Log in", login_path %>
+                     <% end %>                         
+                </li>
+                <li><%= link_to "Profile", current_user %></li>
+              </ul>  
+           </nav>
+         </div>
+     </header>

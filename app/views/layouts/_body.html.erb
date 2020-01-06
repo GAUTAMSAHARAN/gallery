@@ -1,0 +1,22 @@
+<div class="gallery"> 
+  <% if @images.exists? %>
+  <% @images.each_slice(4) do |image| %>
+   <div class="row">
+     <% image.each do |image| %> 
+    <div class="column">
+       <a href="<%= image.image_url() %>" class="image-hover">
+         <div class="image-info">
+        <br>
+        <div class="title"><%= image.image_title %></div>
+        <div class="desc"><%= image.image_description %></div>
+        <div class="count"><strong></strong></div>
+      </div>
+      <div class="mask"></div>
+    </a>
+    <%= image_tag image.image_url(), class: "img" %>
+  </div>  
+     <% end %>
+ </div>
+ </div> 
+  <% end %>
+<% end %>

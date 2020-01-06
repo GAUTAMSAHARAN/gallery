@@ -1,0 +1,27 @@
+<div class="heading-category">
+<h1><%= @category.name %></h1>
+<%= link_to "edit", edit_category_path, class: 'button' %>
+</div>
+<div class="gallery"> 
+  <% if @images.exists? %>
+  <% @images.each_slice(4) do |image| %>
+   <div class="row">
+     <% image.each do |image| %> 
+    <div class="column">
+         <a href="<%= image.image_url() %>" class="image-hover">
+      <div class="image-info">
+        <div class="title"><%= image.image_title %></div>
+        <div class="line"></div>
+        <div class="desc"><%= image.image_description %></div>
+      </div>
+      <div class="mask"></div>
+    </a>
+    <%= image_tag image.image_url(), class: "img" %>
+  </div>  
+     <% end %>
+ </div>
+ </div> 
+  <% end %>
+  <% else %>
+  <h2>There are no images</h2>
+<% end %>

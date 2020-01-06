@@ -1,0 +1,28 @@
+<% if logged_in? %>
+<body class="category">
+<div class="category-new">
+    <%= form_for [@categories] do|f| %>
+   <div class="form-group">
+     <h1>Add New Categories</h1>
+
+   <%= f.label :name %>
+   <%= f.text_field :name, class: 'form-control' %>
+  <br>
+      <%= f.submit "Submit", class: 'btn' %>
+      <br>
+   <%= link_to "cancel", categories_path, class: 'btn' %>
+     <br>
+     <h2>NOTICE</h2>
+    <p class="category-p">This feature only work, if you having an Admin account.</p>
+   </div>
+   <% end %> 
+    <div class="image">
+    	<%= image_tag("c.jpg") %>
+    </div> 
+ </div>
+</body>
+ <% else %>
+  <%= render :template => 'sessions/new' %>
+ 
+<% end %>
+

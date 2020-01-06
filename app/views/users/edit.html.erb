@@ -1,0 +1,48 @@
+<body class="edit-profile">
+
+<div class="edit-form">
+<%= form_for(@user) do |u| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= u.label :name %>
+      <br>
+      <%= u.text_field :name, class: 'form-control' %>
+<br>
+      <%= u.label :email %>
+      <br>
+      <%= u.email_field :email, class: 'form-control' %>
+<br>
+      <%= u.label :password %>
+      <br>
+      <%= u.password_field :password, class: 'form-control' %>
+<br>
+      <%= u.label :password_confirmation, "Confirmation" %>
+      <br>
+      <%= u.password_field :password_confirmation, class: 'form-control' %>
+<br>
+      <%= u.label :AGE, class: 'text-label'  %>
+      <br>
+      <%= u.number_field :age, class: 'label-text' %>
+<br> 
+      <%=  u.label :PHONE_NO, class: 'text-label'  %>
+      <br>
+      <%=  u.number_field :phone_no, class: 'label-text' %>
+<br>
+      <%= u.label :BRANCH, class: 'text-label' %>
+      <br>
+      <%= u.text_field :branch, class: 'label-text' %>
+<br>
+      <%= u.label :YEAR, class: 'text-label' %>
+      <br>
+      <%= u.number_field :year, class: 'label-text' %>
+<br>
+     <%= u.label :image, "Attach an Profile Image" %><br />
+     <%= u.file_field :image %>
+      <%= u.submit "Save changes", class: "btn btn-primary" %>
+<br>
+<br>
+<%= link_to "Back", current_user, class: 'submit-label' %>
+<% end %>
+</div>
+</body>
+    

@@ -1,0 +1,48 @@
+<% if logged_in? %>
+<body class="profile">
+<div class="form-profile">
+<div class="profile-photo">
+  <small class="text-p"><h1>PROFILE</h1></small>
+	<section id="profile-pic">
+      <%= image_tag @user.image.url %>
+	</section>
+	<div class="profile-info" >
+	<small class="username"><strong><%= @user.username %></strong></small>
+    </div>
+</div>
+
+<div class="list">
+<ul id="bio">
+	<li><strong>NAME:</strong> <%= @user.name %></li>
+	<li><strong>AGE:</strong> <%= @user.age %></li>
+	<li><strong>PHONE NO:</strong> <%= @user.phone_no %></li>
+	<li><strong>GENDER:</strong> <%= @user.gender %></li>
+  <li><strong>BRANCH:</strong><%= @user.branch  %></li>
+	<li><strong>YEAR:</strong> <%= @user.year %></li>
+  <li><strong>USER_ID:</strong><%= @user.id %></li>
+	<small class="edit"><%= link_to "EDIT", edit_user_path(current_user) %></small>
+</ul>
+</div>
+</div>
+<div class="posts">
+	<h1 id="post">Posts</h1>
+<div class="gallery"> 
+  <% if @images.any? %>
+  <% @images.each_slice(4) do |image| %>
+   <div class="row">
+     <% image.each do |image| %> 
+    <div class="column">
+    <%= image_tag image.image_url(), class: "img", :id => "img" %>
+  </div>  
+     <% end %>
+ </div>
+ </div> 
+  <% end %>
+  <% else %>
+  <h2 class="post-heading">You haven't made any post yet.</h2>
+<% end %>
+</div>
+</body>
+ <% else %>
+  <%= render :template => 'sessions/new' %>
+<% end %>
