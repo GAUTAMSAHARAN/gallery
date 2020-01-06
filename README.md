@@ -8,7 +8,7 @@ features-list: 1. secure login system.
                2. upload images.
                3. Admin authentication.
                4. Add categories for admin users.
-               5. Porfile pages with show your bio, profile-iamge, posts.
+               5. Porfile pages which show your "bio", "profile-image", "posts".
                
                
                
