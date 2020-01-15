@@ -17,7 +17,8 @@ GETTING STARTED
 2. clone the repositery to your desired location.
 3. open gallery folder (which is present in your desired location where you clone the repo) and open terminal in gallery location.
 4. write "bundle install" in the terminal.
-5. write ("rials server") in the terminal.
+6. Write "rails db:migrate" in the terminal.
+5. write ("rails server") in the terminal.
 6. open "http://localhost:3000/" and enjoy.
 7. feel free to upgrade it according to you.
 
@@ -29,6 +30,7 @@ if you want to login as an Admin user to use the full functionality of this site
 EMAIL: "hello@hello.com"
 
 PASSWORD: '12345asdf'
+
 
 but if you want to make your account an Admin one, please follow given instructions-
  1. press "ctrl+c" in the terminal, if will terminate the rails server.
